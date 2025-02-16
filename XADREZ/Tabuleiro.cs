@@ -7,8 +7,9 @@ public class Tabuleiro
     public Bispo[] bispos { get; private set; }
     public Cavalo[] cavalos { get; private set; }
     public Peao[] peaos { get; private set; }
-}
-    public Tabuleiro()
+
+   /*
+    void Tabuleiro()
     {
         Pecas = new Peça[8, 8];
         Rainhas = new Rainha[2]; 
@@ -19,8 +20,8 @@ public class Tabuleiro
         peaos = new Peao[16]; 
         InicializarTabuleiro();
     }
-
-    private void InicializarTabuleiro()
+*/
+     void InicializarTabuleiro()
     {
     
         Pecas[1, 1] = new Torre("preto", 1, 1); 
@@ -31,7 +32,7 @@ public class Tabuleiro
         Pecas[1, 6] = new Bispo("preto", 1, 6); 
         Pecas[1, 7] = new Cavalo("black", 1, 7); 
         Pecas[1, 8] = new Torre("preto", 1, 8); 
-    }
+    
 
       
         for (int i = 2; i < 9; i++)
@@ -45,7 +46,7 @@ public class Tabuleiro
         Pecas[8, 6] = new Bispo("white", 8, 6); 
         Pecas[8, 7] = new Cavalo("white", 8, 7); 
         Pecas[8, 8] = new Torre("white", 8, 8); 
-
+        }
         for (int i = 7; i < 9; i++)
         {
             Pecas[7, i] = new Peao("white", 7, i);
@@ -71,5 +72,18 @@ public class Tabuleiro
         bispos[2] = new Bispo("preto", 1, 6); 
         bispos[3] = new Bispo("white", 8, 3); 
         bispos[4] = new Bispo("branca", 8, 6); 
+        }
+    }
+    
+    void Tabuleiro0()
+    {
+        Pecas = new Peça[8, 8];
+        Rainhas = new Rainha[2]; 
+        cavalos = new Cavalo[4];
+        reis = new Rei[2]; 
+        torres = new Torre[4]; 
+        bispos = new Bispo[4];
+        peaos = new Peao[16]; 
+        InicializarTabuleiro();
     }
 }
