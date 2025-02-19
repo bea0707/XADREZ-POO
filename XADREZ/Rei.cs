@@ -2,18 +2,10 @@ using System;
 
 public class Rei : Peça
 {
-    public Rei(string cor, int x, int y) : base(cor,x ,y){}
-    public override bool VerificarMovimento()
+    public Rei(string cor, int x, int y) : base(cor,x ,y) 
     {
-        throw new NotImplementedException(); // lógica de movimentação do rei
-    }
-
-
-private void InitializeComponent()
-    {
-
         PictureBox rei = new PictureBox();
-        rei.Location = new Point(30, 30);
+        rei.Location = new Point(30, 30); //construtor que cria os objetos com imagens
         rei.Size = new Size(30, 30);
         rei.SizeMode = PictureBoxSizeMode.StretchImage;
 
@@ -28,9 +20,14 @@ private void InitializeComponent()
             MessageBox.Show("Erro ao carregar imagem: " + ex.Message);
         }
 
-        this.Controls.Add(rei);
         
     }
+    public override bool VerificarMovimento() //metodo sobrescrito que verifica o movimento, falta criar a logica dele para cada peça
+    {
+        throw new NotImplementedException(); // lógica de movimentação do rei
+    }
+
+
 }
 
 

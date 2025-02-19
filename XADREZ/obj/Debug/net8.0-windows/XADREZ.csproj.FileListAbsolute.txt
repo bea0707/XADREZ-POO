@@ -27,3 +27,18 @@ C:\Users\Beatriz\Documents\GitHub\XADREZ-POO\XADREZ\bin\Debug\net8.0-windows\XAD
 C:\Users\Beatriz\Documents\GitHub\XADREZ-POO\XADREZ\bin\Debug\net8.0-windows\XADREZ.pdb
 C:\Users\Beatriz\Documents\GitHub\XADREZ-POO\XADREZ\obj\Debug\net8.0-windows\XADREZ.genruntimeconfig.cache
 C:\Users\Beatriz\Documents\GitHub\XADREZ-POO\XADREZ\obj\Debug\net8.0-windows\ref\XADREZ.dll
+C:\Users\vidro\OneDrive\Área de Trabalho\meus codigos\projetos\XADREZ-POO\XADREZ\obj\Debug\net8.0-windows\XADREZ.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\vidro\OneDrive\Área de Trabalho\meus codigos\projetos\XADREZ-POO\XADREZ\obj\Debug\net8.0-windows\XADREZ.AssemblyInfoInputs.cache
+C:\Users\vidro\OneDrive\Área de Trabalho\meus codigos\projetos\XADREZ-POO\XADREZ\obj\Debug\net8.0-windows\XADREZ.AssemblyInfo.cs
+C:\Users\vidro\OneDrive\Área de Trabalho\meus codigos\projetos\XADREZ-POO\XADREZ\obj\Debug\net8.0-windows\XADREZ.csproj.CoreCompileInputs.cache
+C:\Users\vidro\OneDrive\Área de Trabalho\meus codigos\projetos\XADREZ-POO\XADREZ\obj\Debug\net8.0-windows\XADREZ.sourcelink.json
+C:\Users\vidro\OneDrive\Área de Trabalho\meus codigos\projetos\XADREZ-POO\XADREZ\obj\Debug\net8.0-windows\XADREZ.dll
+C:\Users\vidro\OneDrive\Área de Trabalho\meus codigos\projetos\XADREZ-POO\XADREZ\obj\Debug\net8.0-windows\refint\XADREZ.dll
+C:\Users\vidro\OneDrive\Área de Trabalho\meus codigos\projetos\XADREZ-POO\XADREZ\obj\Debug\net8.0-windows\XADREZ.pdb
+C:\Users\vidro\OneDrive\Área de Trabalho\meus codigos\projetos\XADREZ-POO\XADREZ\bin\Debug\net8.0-windows\XADREZ.exe
+C:\Users\vidro\OneDrive\Área de Trabalho\meus codigos\projetos\XADREZ-POO\XADREZ\bin\Debug\net8.0-windows\XADREZ.deps.json
+C:\Users\vidro\OneDrive\Área de Trabalho\meus codigos\projetos\XADREZ-POO\XADREZ\bin\Debug\net8.0-windows\XADREZ.runtimeconfig.json
+C:\Users\vidro\OneDrive\Área de Trabalho\meus codigos\projetos\XADREZ-POO\XADREZ\bin\Debug\net8.0-windows\XADREZ.dll
+C:\Users\vidro\OneDrive\Área de Trabalho\meus codigos\projetos\XADREZ-POO\XADREZ\bin\Debug\net8.0-windows\XADREZ.pdb
+C:\Users\vidro\OneDrive\Área de Trabalho\meus codigos\projetos\XADREZ-POO\XADREZ\obj\Debug\net8.0-windows\XADREZ.genruntimeconfig.cache
+C:\Users\vidro\OneDrive\Área de Trabalho\meus codigos\projetos\XADREZ-POO\XADREZ\obj\Debug\net8.0-windows\ref\XADREZ.dll

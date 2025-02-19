@@ -2,19 +2,11 @@ using System;
 
 public class Cavalo : Peça
 {
-    public Cavalo(string cor, int x, int y) : base(cor, x, y) {}
-
-    public override bool VerificarMovimento()
-    {
-        return true ; // lógica de movimentação do cavalo
-    }
-
-
-private void InitializeComponent()
-    {
+    public Cavalo(string cor, int x, int y) : base(cor, x, y)
+     {
         PictureBox cavalo = new PictureBox();
         cavalo.Location = new Point(30, 30);
-        cavalo.Size = new Size(30, 30);
+        cavalo.Size = new Size(30, 30); //construtor que cria os objetos com imagens
         cavalo.SizeMode = PictureBoxSizeMode.StretchImage;
 
         try{
@@ -28,7 +20,11 @@ private void InitializeComponent()
             MessageBox.Show("Erro ao carregar imagem: " + ex.Message);
         }
 
-        this.Controls.Add(cavalo);
-        
+     }
+
+    public override bool VerificarMovimento() //metodo sobrescrito que verifica o movimento, falta criar a logica dele para cada peça
+    {
+        return true ; // lógica de movimentação do cavalo
     }
+
 }

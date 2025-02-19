@@ -2,17 +2,10 @@ using System;
 
 public class Bispo : Peça
 {
-    public Bispo(string cor, int x, int y) : base(cor, x, y){}
-    public override bool VerificarMovimento()
+    public Bispo(string cor, int x, int y) : base(cor, x, y)
     {
-        throw new NotImplementedException(); // lógica de movimentação do bispo 
-    }
-
-
-    private void InitializeComponent()
-{
         PictureBox bispo = new PictureBox();
-        bispo.Location = new Point(30, 30);
+        bispo.Location = new Point(30, 30); //construtor que cria os objetos com imagens
         bispo.Size = new Size(30, 30);
         bispo.SizeMode = PictureBoxSizeMode.StretchImage;
 
@@ -27,8 +20,12 @@ public class Bispo : Peça
             MessageBox.Show("Erro ao carregar imagem: " + ex.Message);
         }
 
-        this.Controls.Add(bispo);
-        
+
+    }
+
+    public override bool VerificarMovimento() //metodo sobrescrito que verifica o movimento, falta criar a logica dele para cada peça
+    {
+        return true ; // lógica de movimentação do cavalo
     }
 
 }

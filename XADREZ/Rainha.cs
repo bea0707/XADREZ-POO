@@ -1,18 +1,10 @@
 using System;
 public class Rainha : Peça 
 {
-    public Rainha(string cor, int x, int y) : base(cor, x , y) {}
-
-    public override bool VerificarMovimento()
-    {
-        throw new NotImplementedException(); // lógica de movimentação da rainha
-    }
-
-
-    private void InitializeComponent()
+    public Rainha(string cor, int x, int y) : base(cor, x , y) 
     {
             PictureBox rainha = new PictureBox();
-            rainha.Location = new Point(30, 30);
+            rainha.Location = new Point(30, 30); //construtor que cria os objetos com imagens
             rainha.Size = new Size(30, 30);
             rainha.SizeMode = PictureBoxSizeMode.StretchImage;
 
@@ -29,8 +21,12 @@ public class Rainha : Peça
                 MessageBox.Show("Erro ao carregar imagem: " + ex.Message);
             }
 
-            this.Controls.Add(rainha);
-            
     }
+
+    public override bool VerificarMovimento() //metodo sobrescrito que verifica o movimento, falta criar a logica dele para cada peça
+    {
+        return true ; // lógica de movimentação do cavalo
+    }
+
 }
 

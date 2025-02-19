@@ -11,5 +11,5 @@ public abstract class Peça{
         this.Y = Y;
     }
 
-    public abstract bool VerificarMovimento(); // vai verificar se o movimento é válido 
+    public abstract bool VerificarMovimento(); // esse metodo precisa ser sobrescrito em todas as classes filhas e ao sobrescrever, tem que criar uma logica para verificar se o movimento é valido pra aquela peça
 }
