@@ -2,7 +2,7 @@ using System;
 using System.Reflection.PortableExecutable;
 using System.Security.Cryptography.X509Certificates;
 public class Peao : Peça{
-    public Peao(string cor, int x, int y) : base(cor, x, y) 
+    public Peao(string imagem, int x, int y) : base(imagem, x, y) 
     {
         PictureBox peao = new PictureBox();
         peao.Location = new Point(30, 30);
@@ -10,7 +10,7 @@ public class Peao : Peça{
         peao.SizeMode = PictureBoxSizeMode.StretchImage;
 
         try{
-            string path = Path.Combine(Application.StartupPath, "imagens", "peao.png");
+            string path = Path.Combine(Application.StartupPath, "imagens", imagem);
             MessageBox.Show("Tentando carregar: " + path);
             peao.Image = Image.FromFile(path);
 

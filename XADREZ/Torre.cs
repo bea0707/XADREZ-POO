@@ -1,6 +1,6 @@
 public class Torre : Peça
 {
-    public Torre(string cor, int x, int y) : base(cor,x,y)
+    public Torre(string imagem, int x, int y) : base(imagem,x,y)
     {
             PictureBox torre = new PictureBox();
             torre.Location = new Point(30, 30);
@@ -8,7 +8,7 @@ public class Torre : Peça
             torre.SizeMode = PictureBoxSizeMode.StretchImage;
 
             try{
-                string path = Path.Combine(Application.StartupPath, "imagens", "torre.png");
+                string path = Path.Combine(Application.StartupPath, "imagens", imagem);
                 MessageBox.Show("Tentando carregar: " + path);
                 torre.Image = Image.FromFile(path);
 

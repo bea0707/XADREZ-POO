@@ -1,7 +1,7 @@
 using System;
 public class Rainha : Peça 
 {
-    public Rainha(string cor, int x, int y) : base(cor, x , y) 
+    public Rainha(string imagem, int x, int y) : base(imagem, x , y) 
     {
             PictureBox rainha = new PictureBox();
             rainha.Location = new Point(30, 30); //construtor que cria os objetos com imagens
@@ -10,7 +10,7 @@ public class Rainha : Peça
 
             try
             {
-                string path = Path.Combine(Application.StartupPath, "imagens", "rainha.png");
+                string path = Path.Combine(Application.StartupPath, "imagens", imagem);
                 MessageBox.Show("Tentando carregar: " + path);
                 rainha.Image = Image.FromFile(path);
 

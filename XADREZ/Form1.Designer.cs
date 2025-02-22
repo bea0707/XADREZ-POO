@@ -7,7 +7,7 @@ partial class Form1
     /// </summary>
     private System.ComponentModel.IContainer components = null;
     private const int GridSize = 8;
-    private Button[,] grid = new Button[GridSize, GridSize]; //cria uma matriz generica com 8/8 de tamanho para armazenar os botões
+    private Peça[,] grid = new Peça[GridSize, GridSize]; //cria uma matriz generica com 8/8 de tamanho para armazenar os botões
    
 
 
@@ -67,15 +67,8 @@ partial class Form1
         {
             for (int coluna = 0; coluna < GridSize; coluna++)
             {
-                Button botao = new Button();
-                botao.Size = new Size(50, 50);
-                botao.Location = new Point(50 * linha, 50 * coluna); //loop que cria os botoes na tela
-               
-                int x = linha;
-                int y = coluna;
-               
-                grid[linha, coluna] = botao;
-                this.Controls.Add(botao);
+                grid[linha, coluna] = new CasaVazia(linha * 50, coluna * 50);
+                this.Controls.Add(grid[linha, coluna].Button);
             }  
         }
     
@@ -84,10 +77,57 @@ partial class Form1
         Tabuleiro tabuleiro = new Tabuleiro(); //chama os metodos Tabuleiro0 e InicializarTabuleiro, mas não será necessario (ate então) usar esses metodos (motivo comentado na clase)
         //tabuleiro.Tabuleiro0();
 
+        private int origemX = -1, origemY = -1;
 
+        public void cliqueTabuleiro (Peça peca)
+        {
+            if(origemX == -1 && origemY == -1) // verifica se é o primeiro clique
+            {
+                if(peca is not CasaVazia)
+                {
+                    origemX = peca.x;
+                    origemY = peca.y;
+                }
+            }
+            else
+            {
+                Peca pecaOrigem, pecaDestino;
 
+                pecaOrigem = grid[origemX, origemY];
+                pecaDestino = grid[peca.x, peca.y];
+
+                if (pecaDestino is CasaVazia) // Se o destino estiver vazio, apenas move a peça
+                    {
+                        // Atualiza a matriz
+                            // Atualiza a matriz
+                            tabuleiro[origemX, origemY] = new CasaVazia(origemX * 50, origemY * 50, "casaVazia.png");
+                            tabuleiro[peca.x, peca.y] = pecaOrigem;
+
+                            // Atualiza as coordenadas da peça movida
+                            pecaOrigem.x = peca.x;
+                            pecaOrigem.y = peca.y;
+
+                            // Atualiza a posição visualmente
+                            pecaOrigem.pictureBox.Location = new Point(peca.x * 50, peca.y * 50);
+                    }
+             else // Se houver outra peça, troca as posições
+                {
+                // Remover peça do tabuleiro
+                this.Controls.Remove(pecaDestino.pictureBox);
+
+                // Substitui a peça no tabuleiro
+                tabuleiro[peca.x, peca.y] = pecaOrigem;
+                tabuleiro[origemX, origemY] = new CasaVazia(origemX * 50, origemY * 50, "casaVazia.png");
+
+                // Atualiza a posição visualmente
+                pecaOrigem.x = peca.x;
+                pecaOrigem.y = peca.y;
+                pecaOrigem.pictureBox.Location = new Point(peca.x * 50, peca.y * 50);
+                }
         
 
+        
+            }
 
         #endregion
     }

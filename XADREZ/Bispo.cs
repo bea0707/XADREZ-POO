@@ -2,7 +2,7 @@ using System;
 
 public class Bispo : Peça
 {
-    public Bispo(string cor, int x, int y) : base(cor, x, y)
+    public Bispo(string imagem, int x, int y) : base(imagem, x, y)
     {
         PictureBox bispo = new PictureBox();
         bispo.Location = new Point(30, 30); //construtor que cria os objetos com imagens
@@ -10,7 +10,7 @@ public class Bispo : Peça
         bispo.SizeMode = PictureBoxSizeMode.StretchImage;
 
         try{
-            string path = Path.Combine(Application.StartupPath, "imagens", "bispo.png");
+            string path = Path.Combine(Application.StartupPath, "imagens", imagem);
             MessageBox.Show("Tentando carregar: " + path);
             bispo.Image = Image.FromFile(path);
 

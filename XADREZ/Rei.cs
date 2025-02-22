@@ -2,7 +2,7 @@ using System;
 
 public class Rei : Peça
 {
-    public Rei(string cor, int x, int y) : base(cor,x ,y) 
+    public Rei(string imagem, int x, int y) : base(imagem,x ,y) 
     {
         PictureBox rei = new PictureBox();
         rei.Location = new Point(30, 30); //construtor que cria os objetos com imagens
@@ -10,7 +10,7 @@ public class Rei : Peça
         rei.SizeMode = PictureBoxSizeMode.StretchImage;
 
         try{
-            string path = Path.Combine(Application.StartupPath, "imagens", "rei.png");
+            string path = Path.Combine(Application.StartupPath, "imagens", imagem);
             MessageBox.Show("Tentando carregar: " + path);
             rei.Image = Image.FromFile(path);
 
