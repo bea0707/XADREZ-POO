@@ -9,8 +9,6 @@ partial class Form1
     private const int GridSize = 8;
     private Peça[,] grid = new Peça[GridSize, GridSize]; //cria uma matriz generica com 8/8 de tamanho para armazenar os botões
    
-
-
     //<summary>
         
     ///  Clean up any resources being used.
@@ -59,8 +57,9 @@ partial class Form1
             MessageBox.Show("Erro ao carregar imagem: " + ex.Message);
         }
 
+        //grid[0,0] = rei;
         this.Controls.Add(rei); //adiciona o picturebox do rei na tela (o metodo Controls so aceita tipos do winforms, por exemplo, o picture box)
-
+        rei.Click += (sender, args) => {OnCellClick(0, 0);};
 
 
         for (int linha = 0; linha < GridSize; linha++)
@@ -72,7 +71,11 @@ partial class Form1
             }  
         }
     
-    
+        void OnCellClick(int linha, int coluna)
+         {
+        // Lógica a ser executada quando a célula for clicada
+            MessageBox.Show($"Célula clicada: {linha}, {coluna}");
+        }
 
         Tabuleiro tabuleiro = new Tabuleiro(); //chama os metodos Tabuleiro0 e InicializarTabuleiro, mas não será necessario (ate então) usar esses metodos (motivo comentado na clase)
         //tabuleiro.Tabuleiro0();
