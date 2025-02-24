@@ -3,6 +3,7 @@ public class Rainha : Peça
 {
     public Rainha(string imagem, int x, int y) : base(imagem, x , y) 
     {
+            /*
             PictureBox rainha = new PictureBox();
             rainha.Location = new Point(30, 30); //construtor que cria os objetos com imagens
             rainha.Size = new Size(30, 30);
@@ -20,6 +21,7 @@ public class Rainha : Peça
             {
                 MessageBox.Show("Erro ao carregar imagem: " + ex.Message);
             }
+            */
 
     }
 

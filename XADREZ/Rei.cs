@@ -4,6 +4,7 @@ public class Rei : Peça
 {
     public Rei(string imagem, int x, int y) : base(imagem,x ,y) 
     {
+        /*
         PictureBox rei = new PictureBox();
         rei.Location = new Point(30, 30); //construtor que cria os objetos com imagens
         rei.Size = new Size(30, 30);
@@ -19,7 +20,7 @@ public class Rei : Peça
         catch (Exception ex){
             MessageBox.Show("Erro ao carregar imagem: " + ex.Message);
         }
-
+*/
         
     }
     public override bool VerificarMovimento() //metodo sobrescrito que verifica o movimento, falta criar a logica dele para cada peça

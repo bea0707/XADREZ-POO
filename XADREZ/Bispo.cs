@@ -4,6 +4,7 @@ public class Bispo : Peça
 {
     public Bispo(string imagem, int x, int y) : base(imagem, x, y)
     {
+       /*
         PictureBox bispo = new PictureBox();
         bispo.Location = new Point(30, 30); //construtor que cria os objetos com imagens
         bispo.Size = new Size(30, 30);
@@ -19,7 +20,7 @@ public class Bispo : Peça
         catch (Exception ex){
             MessageBox.Show("Erro ao carregar imagem: " + ex.Message);
         }
-
+*/
 
     }
 

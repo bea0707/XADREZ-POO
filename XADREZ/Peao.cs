@@ -4,6 +4,7 @@ using System.Security.Cryptography.X509Certificates;
 public class Peao : Peça{
     public Peao(string imagem, int x, int y) : base(imagem, x, y) 
     {
+       /*
         PictureBox peao = new PictureBox();
         peao.Location = new Point(30, 30);
         peao.Size = new Size(30, 30); //construtor que cria os objetos com imagens
@@ -19,7 +20,7 @@ public class Peao : Peça{
         catch (Exception ex){
             MessageBox.Show("Erro ao carregar imagem: " + ex.Message);
         }
-
+*/
     }
 
     public override bool VerificarMovimento() //metodo sobrescrito que verifica o movimento, falta criar a logica dele para cada peça
