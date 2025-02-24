@@ -47,7 +47,7 @@ public partial class Form1 : Form
                         pecaOrigem.pictureBox.Location = new Point(peca.x * 50, peca.y * 50);
 
                     }
-                else // Se houver outra peça, troca as posições
+                else if (pecaDestino != pecaOrigem) // Se houver outra peça, troca as posições
                     {
                     // Remover peça do tabuleiro
                     MessageBox.Show("não é casa vazia");
@@ -61,6 +61,10 @@ public partial class Form1 : Form
                     pecaOrigem.x = peca.x;
                     pecaOrigem.y = peca.y;
                     pecaOrigem.pictureBox.Location = new Point(peca.x * 50, peca.y * 50);
+                    }
+                    else 
+                    {
+                          MessageBox.Show("clicou no mesmo lugar");
                     }
             
                     origemX = -1;

@@ -26,5 +26,5 @@ public abstract class Peça{
     }
     
 
-    public abstract bool VerificarMovimento(); // esse metodo precisa ser sobrescrito em todas as classes filhas e ao sobrescrever, tem que criar uma logica para verificar se o movimento é valido pra aquela peça
+   // public abstract bool VerificarMovimento(); // esse metodo precisa ser sobrescrito em todas as classes filhas e ao sobrescrever, tem que criar uma logica para verificar se o movimento é valido pra aquela peça
 }

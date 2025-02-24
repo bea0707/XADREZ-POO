@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\vidro\\OneDrive\\Área de Trabalho\\meus codigos\\projetos\\XADREZ-POO\\XADREZ\\XADREZ.csproj": {}
+    "C:\\Users\\Beatriz\\Documents\\GitHub\\XADREZ-POO\\XADREZ\\XADREZ.csproj": {}
   },
   "projects": {
-    "C:\\Users\\vidro\\OneDrive\\Área de Trabalho\\meus codigos\\projetos\\XADREZ-POO\\XADREZ\\XADREZ.csproj": {
+    "C:\\Users\\Beatriz\\Documents\\GitHub\\XADREZ-POO\\XADREZ\\XADREZ.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\vidro\\OneDrive\\Área de Trabalho\\meus codigos\\projetos\\XADREZ-POO\\XADREZ\\XADREZ.csproj",
+        "projectUniqueName": "C:\\Users\\Beatriz\\Documents\\GitHub\\XADREZ-POO\\XADREZ\\XADREZ.csproj",
         "projectName": "XADREZ",
-        "projectPath": "C:\\Users\\vidro\\OneDrive\\Área de Trabalho\\meus codigos\\projetos\\XADREZ-POO\\XADREZ\\XADREZ.csproj",
-        "packagesPath": "C:\\Users\\vidro\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\vidro\\OneDrive\\Área de Trabalho\\meus codigos\\projetos\\XADREZ-POO\\XADREZ\\obj\\",
+        "projectPath": "C:\\Users\\Beatriz\\Documents\\GitHub\\XADREZ-POO\\XADREZ\\XADREZ.csproj",
+        "packagesPath": "C:\\Users\\Beatriz\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Beatriz\\Documents\\GitHub\\XADREZ-POO\\XADREZ\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\vidro\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Beatriz\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0-windows"
@@ -61,7 +61,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.403/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.401/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

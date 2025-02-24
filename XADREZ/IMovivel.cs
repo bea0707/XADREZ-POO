@@ -1,0 +1,4 @@
+interface IMovivel
+{
+    bool VerificarMovimento();
+}

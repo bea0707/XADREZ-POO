@@ -1,4 +1,4 @@
-class CasaVazia : Peça
+class CasaVazia : Peça, IMovivel
 {
 
     public CasaVazia(string imagem, int x, int y) : base(imagem, x, y)
@@ -7,7 +7,7 @@ class CasaVazia : Peça
         }
 
 
-     public override bool VerificarMovimento() {return true;}
+     public bool VerificarMovimento() {return true;}
         
     
 }
