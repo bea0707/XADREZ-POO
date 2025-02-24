@@ -1,5 +1,5 @@
-﻿namespace XADREZ
-{
+﻿namespace XADREZ;
+
 
     partial class Form1
     {
@@ -40,46 +40,31 @@
             this.ClientSize = new System.Drawing.Size(400, 400);
             this.Text = "xadrez";
 
+
+                for (int linha = 0; linha < GridSize; linha++)
+                {
+                    for (int coluna = 0; coluna < GridSize; coluna++)
+                    {
+                        int tempLinha = linha;
+                        int tempColuna = coluna;
+                        grid[linha, coluna] = new CasaVazia("casaVazia.png", linha * 50, coluna * 50);
+                        this.Controls.Add(grid[linha, coluna].pictureBox); // se clicar em uma casa vazia aparece esse erro "System.IndexOutOfRangeException: Index was outside the bounds of the array."
+                        grid[tempLinha, tempColuna].pictureBox.BringToFront();
+                        grid[tempLinha, tempColuna].pictureBox.Click += (sender, args) => {OnCellClick(grid[tempLinha, tempColuna]);}; // local do erro " at XADREZ.Form1.<>c__DisplayClass8_2.<InitializeComponent>b__1(Object sender, EventArgs args) in C:\Users\vidro\OneDrive\Área de Trabalho\meus codigos\projetos\XADREZ-POO\XADREZ\Form1.Designer.cs:line 58"
+
+                    }  
+
+                }
+
+            
             Rei rei = new Rei("rei.png", 0, 0);
-            //rei.Size = new Size(50, 50); // cria o picturebox do rei
-            //rei.Location = new Point(0, 0);
-            //rei.SizeMode = PictureBoxSizeMode.StretchImage;
-
-            /*
-            try
-            {
-                string path = Path.Combine(Application.StartupPath, "imagens", "rei.png");
-                MessageBox.Show("Tentando carregar: " + path); //tratamento de exeção pra carregar a imagem do rei
-                rei.Image = Image.FromFile(path);
-
-            }
-
-            catch (Exception ex)
-            {
-                MessageBox.Show("Erro ao carregar imagem: " + ex.Message);
-            }
-            */
-
-            //grid[0,0] = rei;
+            
             grid[rei.x, rei.y] = rei;
             this.Controls.Add(rei.pictureBox); //adiciona o picturebox do rei na tela (o metodo Controls so aceita tipos do winforms, por exemplo, o picture box)
             rei.pictureBox.BringToFront();
             rei.pictureBox.Click += (sender, args) => {OnCellClick(rei);};
 
-
-            
-            for (int linha = 0; linha < GridSize; linha++)
-            {
-                for (int coluna = 0; coluna < GridSize; coluna++)
-                {
-                    grid[linha, coluna] = new CasaVazia("casaVazia.png", linha * 50, coluna * 50);
-                    this.Controls.Add(grid[linha, coluna].pictureBox);
-                    grid[linha, coluna].pictureBox.Click += (sender, args) => {OnCellClick(grid[linha, coluna]);};
-                }  
-            }
-    
-
-            Tabuleiro tabuleiro = new Tabuleiro(); //chama os metodos Tabuleiro0 e InicializarTabuleiro, mas não será necessario (ate então) usar esses metodos (motivo comentado na clase)
+           // Tabuleiro tabuleiro = new Tabuleiro(); //chama os metodos Tabuleiro0 e InicializarTabuleiro, mas não será necessario (ate então) usar esses metodos (motivo comentado na clase)
             //tabuleiro.Tabuleiro0();
 
         
@@ -92,4 +77,3 @@
     }
 
 
-}

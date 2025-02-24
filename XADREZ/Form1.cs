@@ -10,7 +10,7 @@ public partial class Form1 : Form
     }
 
 
-void OnCellClick(Peça peca)
+    void OnCellClick(Peça peca)
     {
         if(origemX == -1 && origemY == -1) // verifica se é o primeiro clique
             {
@@ -20,6 +20,12 @@ void OnCellClick(Peça peca)
                         origemY = peca.y;
                         MessageBox.Show($"Peça selecionada em ({peca.x}, {peca.y})");
                     }
+                else 
+                {
+                    origemX = -1;
+                    origemY = -1;
+                    MessageBox.Show("casa vazia)");
+                }
             }
             else
             {
@@ -27,7 +33,7 @@ void OnCellClick(Peça peca)
                 Peça pecaDestino = grid[peca.x, peca.y];
                 MessageBox.Show($"Peça2 selecionada em ({peca.x}, {peca.y})");
 
-                if (pecaDestino is CasaVazia) // Se o destino estiver vazio, apenas move a peça
+                if (pecaDestino is CasaVazia && pecaDestino != pecaOrigem) // Se o destino estiver vazio, apenas move a peça
                     {
                         MessageBox.Show("é casa vazia");
                         grid[origemX, origemY] = new CasaVazia("casaVazia.png", origemX * 50, origemY * 50);
@@ -60,7 +66,7 @@ void OnCellClick(Peça peca)
                     origemX = -1;
                     origemY = -1;
             
-                }
             }
+    }
 
 }
