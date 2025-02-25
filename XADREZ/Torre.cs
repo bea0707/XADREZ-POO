@@ -1,6 +1,6 @@
 public class Torre : Peça, IMovivel
 {
-    public Torre(string imagem, int x, int y) : base(imagem,x,y)
+    public Torre(string imagem, int x, int y, enumCor cor) : base(imagem,x,y,cor)
     {
 
         }

@@ -36,7 +36,7 @@ public partial class Form1 : Form
                 if (pecaDestino is CasaVazia && pecaDestino != pecaOrigem) // Se o destino estiver vazio, apenas move a peça
                     {
                         MessageBox.Show("é casa vazia");
-                        grid[origemX, origemY] = new CasaVazia("casaVazia.png", origemX * 50, origemY * 50);
+                        grid[origemX, origemY] = new CasaVazia("casaVazia.png", origemX * 50, origemY * 50, enumCor.vazio);
                         grid[peca.x, peca.y] = pecaOrigem;
 
                         // Atualiza as coordenadas da peça movida
@@ -55,7 +55,7 @@ public partial class Form1 : Form
 
                     // Substitui a peça no tabuleiro
                     grid[peca.x, peca.y] = pecaOrigem;
-                    grid[origemX, origemY] = new CasaVazia("casaVazia.png", origemX * 50, origemY * 50);
+                    grid[origemX, origemY] = new CasaVazia("casaVazia.png", origemX * 50, origemY * 50, enumCor.vazio);
 
                     // Atualiza a posição visualmente
                     pecaOrigem.x = peca.x;

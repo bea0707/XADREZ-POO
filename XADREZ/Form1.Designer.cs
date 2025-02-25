@@ -47,7 +47,7 @@
                     {
                         int tempLinha = linha;
                         int tempColuna = coluna;
-                        grid[linha, coluna] = new CasaVazia("casaVazia.png", linha * 50, coluna * 50);
+                        grid[linha, coluna] = new CasaVazia("casaVazia.png", linha * 50, coluna * 50, enumCor.vazio);
                         this.Controls.Add(grid[linha, coluna].pictureBox); // se clicar em uma casa vazia aparece esse erro "System.IndexOutOfRangeException: Index was outside the bounds of the array."
                         grid[tempLinha, tempColuna].pictureBox.BringToFront();
                         grid[tempLinha, tempColuna].pictureBox.Click += (sender, args) => {OnCellClick(grid[tempLinha, tempColuna]);}; // local do erro " at XADREZ.Form1.<>c__DisplayClass8_2.<InitializeComponent>b__1(Object sender, EventArgs args) in C:\Users\vidro\OneDrive\Área de Trabalho\meus codigos\projetos\XADREZ-POO\XADREZ\Form1.Designer.cs:line 58"
@@ -57,7 +57,7 @@
                 }
 
             
-            Rei rei = new Rei("rei.png", 0, 0);
+            Rei rei = new Rei("rei.png", 0, 0, enumCor.branco);
             
             grid[rei.x, rei.y] = rei;
             this.Controls.Add(rei.pictureBox); //adiciona o picturebox do rei na tela (o metodo Controls so aceita tipos do winforms, por exemplo, o picture box)
@@ -66,6 +66,8 @@
 
            // Tabuleiro tabuleiro = new Tabuleiro(); //chama os metodos Tabuleiro0 e InicializarTabuleiro, mas não será necessario (ate então) usar esses metodos (motivo comentado na clase)
             //tabuleiro.Tabuleiro0();
+
+
 
         
 

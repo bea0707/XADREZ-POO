@@ -1,7 +1,7 @@
 using System;
 public class Rainha : Peça, IMovivel
 {
-    public Rainha(string imagem, int x, int y) : base(imagem, x , y) 
+    public Rainha(string imagem, int x, int y, enumCor cor) : base(imagem, x , y, cor) 
     {
            
     }

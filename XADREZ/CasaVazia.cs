@@ -1,7 +1,7 @@
 class CasaVazia : Peça, IMovivel
 {
 
-    public CasaVazia(string imagem, int x, int y) : base(imagem, x, y)
+    public CasaVazia(string imagem, int x, int y, enumCor cor) : base(imagem, x, y, cor)
         {
 
         }

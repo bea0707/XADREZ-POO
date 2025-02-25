@@ -1,3 +1,4 @@
+/*
 public class Tabuleiro
 {
     public Peça[,] Pecas { get; private set; }
@@ -67,7 +68,7 @@ public class Tabuleiro
         bispos[1] = new Bispo("preto", 0, 5); 
         bispos[2] = new Bispo("branco", 7, 2); 
         bispos[3] = new Bispo("branco", 7, 5); 
-        */
+        
         
     }
     
@@ -86,3 +87,4 @@ public class Tabuleiro
         InicializarTabuleiro();
     }
 }
+*/

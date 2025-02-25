@@ -2,7 +2,7 @@ using System;
 
 public class Cavalo : Peça, IMovivel
 {
-    public Cavalo(string imagem, int x, int y) : base(imagem, x, y)
+    public Cavalo(string imagem, int x, int y, enumCor cor) : base(imagem, x, y, cor)
      {
        
      }

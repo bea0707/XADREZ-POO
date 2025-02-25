@@ -2,7 +2,7 @@ using System;
 
 public class Bispo : Peça, IMovivel
 {
-    public Bispo(string imagem, int x, int y) : base(imagem, x, y)
+    public Bispo(string imagem, int x, int y, enumCor cor) : base(imagem, x, y, cor)
     {
 
 
