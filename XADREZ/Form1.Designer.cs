@@ -64,8 +64,12 @@
             rei.pictureBox.BringToFront();
             rei.pictureBox.Click += (sender, args) => {OnCellClick(rei);};
 
-           // Tabuleiro tabuleiro = new Tabuleiro(); //chama os metodos Tabuleiro0 e InicializarTabuleiro, mas não será necessario (ate então) usar esses metodos (motivo comentado na clase)
-            //tabuleiro.Tabuleiro0();
+            Rei reiP = new Rei("rei_p.png", 5 * 50, 5 * 50, enumCor.preto);
+            grid[reiP.x, reiP.y] = reiP;
+            this.Controls.Add(reiP.pictureBox);
+            reiP.pictureBox.BringToFront();
+            reiP.pictureBox.Click += (sender, args) => {OnCellClick(reiP);};
+
 
 
 
