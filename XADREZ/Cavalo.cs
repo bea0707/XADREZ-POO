@@ -9,7 +9,11 @@ public class Cavalo : Peça
 
     public override bool VerificarMovimento(int DestinoX, int DestinoY) //metodo sobrescrito que verifica o movimento, falta criar a logica dele para cada peça
     {
-        return true ; // lógica de movimentação do cavalo
+        int DiferençaX = Math.Abs(DestinoX - x);
+        int DiferençaY = Math.Abs(DestinoY - y);
+
+        return DiferençaX == 2 && DiferençaY == 1 || DiferençaX == 1 && DiferençaY == 2;
+        
     }
 
 }

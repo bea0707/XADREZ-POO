@@ -10,7 +10,11 @@ public class Bispo : Peça
 
     public override bool VerificarMovimento(int DestinoX, int DestinoY) //metodo sobrescrito que verifica o movimento, falta criar a logica dele para cada peça
     {
-        return true;
+        int DiferençaX = Math.Abs(DestinoX - x);
+        int DiferençaY = Math.Abs(DestinoY - y);
+
+        return DiferençaX == DiferençaY;
+        
     }
 
 }

@@ -24,7 +24,7 @@ public partial class Form1 : Form
                 {
                     origemX = -1;
                     origemY = -1;
-                    MessageBox.Show("casa vazia)");
+                    
                 }
             }
             else
@@ -76,7 +76,7 @@ public partial class Form1 : Form
                           MessageBox.Show("clicou no mesmo lugar");
                     }
                 
-            
+                    ArquivoJogo.SalvarJogadas(grid);
                     origemX = -1;
                     origemY = -1;
             
