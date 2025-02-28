@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Users\\20231170150061\\Documents\\GitHub\\XADREZ-POO\\XADREZ\\XADREZ.csproj": {}
+    "C:\\Users\\20231170150061\\Documents\\GitHub\\XADREZ-POO\\XADREZ\\XADREZ.csproj": {}
   },
   "projects": {
-    "D:\\Users\\20231170150061\\Documents\\GitHub\\XADREZ-POO\\XADREZ\\XADREZ.csproj": {
+    "C:\\Users\\20231170150061\\Documents\\GitHub\\XADREZ-POO\\XADREZ\\XADREZ.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Users\\20231170150061\\Documents\\GitHub\\XADREZ-POO\\XADREZ\\XADREZ.csproj",
+        "projectUniqueName": "C:\\Users\\20231170150061\\Documents\\GitHub\\XADREZ-POO\\XADREZ\\XADREZ.csproj",
         "projectName": "XADREZ",
-        "projectPath": "D:\\Users\\20231170150061\\Documents\\GitHub\\XADREZ-POO\\XADREZ\\XADREZ.csproj",
-        "packagesPath": "D:\\Users\\20231170150061\\.nuget\\packages\\",
-        "outputPath": "D:\\Users\\20231170150061\\Documents\\GitHub\\XADREZ-POO\\XADREZ\\obj\\",
+        "projectPath": "C:\\Users\\20231170150061\\Documents\\GitHub\\XADREZ-POO\\XADREZ\\XADREZ.csproj",
+        "packagesPath": "C:\\Users\\20231170150061\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\20231170150061\\Documents\\GitHub\\XADREZ-POO\\XADREZ\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "D:\\Users\\20231170150061\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\20231170150061\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0-windows"

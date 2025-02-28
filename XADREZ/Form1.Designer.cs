@@ -48,28 +48,46 @@
                         int tempLinha = linha;
                         int tempColuna = coluna;
                         grid[linha, coluna] = new CasaVazia("casaVazia.png", linha * 50, coluna * 50, enumCor.vazio);
-                        this.Controls.Add(grid[linha, coluna].pictureBox); // se clicar em uma casa vazia aparece esse erro "System.IndexOutOfRangeException: Index was outside the bounds of the array."
+                        this.Controls.Add(grid[linha, coluna].pictureBox); 
                         grid[tempLinha, tempColuna].pictureBox.BringToFront();
-                        grid[tempLinha, tempColuna].pictureBox.Click += (sender, args) => {OnCellClick(grid[tempLinha, tempColuna]);}; // local do erro " at XADREZ.Form1.<>c__DisplayClass8_2.<InitializeComponent>b__1(Object sender, EventArgs args) in C:\Users\vidro\OneDrive\Área de Trabalho\meus codigos\projetos\XADREZ-POO\XADREZ\Form1.Designer.cs:line 58"
+                        grid[tempLinha, tempColuna].pictureBox.Click += (sender, args) => {OnCellClick(grid[tempLinha, tempColuna]);}; 
 
                     }  
 
                 }
 
-            
-            Rei rei = new Rei("rei.png", 0, 0, enumCor.branco);
-            
-            grid[rei.x, rei.y] = rei;
-            this.Controls.Add(rei.pictureBox); //adiciona o picturebox do rei na tela (o metodo Controls so aceita tipos do winforms, por exemplo, o picture box)
-            rei.pictureBox.BringToFront();
-            rei.pictureBox.Click += (sender, args) => {OnCellClick(rei);};
+                Rei rei = new Rei("rei.png", 4 * 50, 7 * 50, enumCor.branco); // cria o rei branco
+                grid[rei.x, rei.y] = rei;
+                this.Controls.Add(rei.pictureBox); 
+                rei.pictureBox.BringToFront();
+                rei.pictureBox.Click += (sender, args) => {OnCellClick(rei);};
 
-            Rei reiP = new Rei("rei_p.png", 5 * 50, 5 * 50, enumCor.preto);
-            grid[reiP.x, reiP.y] = reiP;
-            this.Controls.Add(reiP.pictureBox);
-            reiP.pictureBox.BringToFront();
-            reiP.pictureBox.Click += (sender, args) => {OnCellClick(reiP);};
+                Rei reiP = new Rei("rei_p.png", 3 * 50, 0 * 50, enumCor.preto); // cria rei preto
+                grid[reiP.x, reiP.y] = reiP;
+                this.Controls.Add(reiP.pictureBox);
+                reiP.pictureBox.BringToFront();
+                reiP.pictureBox.Click += (sender, args) => {OnCellClick(reiP);};
 
+                
+                for(int i = 0; i < 8; i++) //loop que cria os peões brancos
+                {
+                    int coluna = i;
+                    Peao peao = new Peao("peao.png", coluna * 50, 6 * 50, enumCor.branco);
+                    grid[peao.x, peao.y] = peao;
+                    this.Controls.Add(peao.pictureBox);
+                    peao.pictureBox.BringToFront();
+                    peao.pictureBox.Click += (sender, args) => {OnCellClick(peao);};
+                }
+
+                for(int i = 0; i < 8; i++) //loop que cria os peões brancos
+                {
+                    int coluna = i;
+                    Peao peaoP = new Peao("peao_p.png", coluna * 50, 1 * 50, enumCor.preto);
+                    grid[peaoP.x, peaoP.y] = peaoP;
+                    this.Controls.Add(peaoP.pictureBox);
+                    peaoP.pictureBox.BringToFront();
+                    peaoP.pictureBox.Click += (sender, args) => {OnCellClick(peaoP);};
+                }
 
 
 

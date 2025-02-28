@@ -1,4 +1,4 @@
-class CasaVazia : Peça, IMovivel
+class CasaVazia : Peça
 {
 
     public CasaVazia(string imagem, int x, int y, enumCor cor) : base(imagem, x, y, cor)
@@ -7,7 +7,7 @@ class CasaVazia : Peça, IMovivel
         }
 
 
-     public bool VerificarMovimento() {return true;}
+     public override bool VerificarMovimento(int DestinoX, int DestinoY) {return true;}
         
     
 }

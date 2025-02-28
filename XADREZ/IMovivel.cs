@@ -1,4 +1,0 @@
-interface IMovivel
-{
-    bool VerificarMovimento();
-}

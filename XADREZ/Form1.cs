@@ -33,6 +33,15 @@ public partial class Form1 : Form
                 Peça pecaDestino = grid[peca.x, peca.y];
                 MessageBox.Show($"Peça2 selecionada em ({peca.x}, {peca.y})");
 
+                if(!pecaOrigem.VerificarMovimento(peca.x, peca.y))
+                {
+                    MessageBox.Show("movimento invalido");
+                    origemX = -1;
+                    origemY = -1;
+                    return;
+
+                }
+
                 if (pecaDestino is CasaVazia && pecaDestino != pecaOrigem) // Se o destino estiver vazio, apenas move a peça
                     {
                         MessageBox.Show("é casa vazia");
@@ -66,6 +75,7 @@ public partial class Form1 : Form
                     {
                           MessageBox.Show("clicou no mesmo lugar");
                     }
+                
             
                     origemX = -1;
                     origemY = -1;

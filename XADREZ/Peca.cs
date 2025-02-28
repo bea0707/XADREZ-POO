@@ -31,6 +31,8 @@ public abstract class Peça{
             MessageBox.Show("Erro ao carregar imagem: " + ex.Message);  
         }
     }
+
+    public abstract bool VerificarMovimento(int DestinoX, int DestinoY);
     
 
 }
