@@ -3,6 +3,7 @@ namespace XADREZ;
 public partial class Form1 : Form
 {
     private int origemX = -1, origemY = -1;
+    private bool vezBranco = true;
 
     public Form1()
     {
@@ -14,12 +15,28 @@ public partial class Form1 : Form
     {
         if(origemX == -1 && origemY == -1) // verifica se é o primeiro clique
             {
+
                 if(peca is not CasaVazia)
+                {
+                    if(vezBranco && peca.cor == enumCor.branco)
                     {
                         origemX = peca.x;
                         origemY = peca.y;
                         MessageBox.Show($"Peça selecionada em ({peca.x}, {peca.y})");
+                        vezBranco = false;
                     }
+                    else if(!vezBranco && peca.cor == enumCor.preto)
+                    {
+                        origemX = peca.x;
+                        origemY = peca.y;
+                        MessageBox.Show($"Peça selecionada em ({peca.x}, {peca.y})");
+                        vezBranco = true;
+                    }
+                    else
+                    {
+                        MessageBox.Show("vez do outro jogador");
+                    }
+                }
                 else 
                 {
                     origemX = -1;
@@ -42,9 +59,16 @@ public partial class Form1 : Form
 
                 }
 
+                if(pecaOrigem.cor == pecaDestino.cor)
+                {
+                    MessageBox.Show("movimento invalido! não pode comer uma peça da mesma cor");
+                    origemX = -1;
+                    origemY = -1;
+                    return;   
+                }
+
                 if (pecaDestino is CasaVazia && pecaDestino != pecaOrigem) // Se o destino estiver vazio, apenas move a peça
                     {
-                        MessageBox.Show("é casa vazia");
                         grid[origemX, origemY] = new CasaVazia("casaVazia.png", origemX * 50, origemY * 50, enumCor.vazio);
                         grid[peca.x, peca.y] = pecaOrigem;
 
@@ -59,7 +83,6 @@ public partial class Form1 : Form
                 else if (pecaDestino != pecaOrigem) // Se houver outra peça, troca as posições
                     {
                     // Remover peça do tabuleiro
-                    MessageBox.Show("não é casa vazia");
                     this.Controls.Remove(pecaDestino.pictureBox);
 
                     // Substitui a peça no tabuleiro
@@ -70,6 +93,22 @@ public partial class Form1 : Form
                     pecaOrigem.x = peca.x;
                     pecaOrigem.y = peca.y;
                     pecaOrigem.pictureBox.Location = new Point(peca.x * 50, peca.y * 50);
+
+                    if(pecaDestino is Rei)
+                    {
+                        switch (pecaDestino.cor)
+                        {
+                            case enumCor.branco:
+                                MessageBox.Show("PARABENS! OS PRETOS GANHARAM!!!!");
+                                Application.Exit();
+                                break;
+
+                            case enumCor.preto:
+                                MessageBox.Show("PARABENS! OS BRANCOS GANHARAM!!!!");
+                                Application.Exit();
+                                break;
+                        }
+                    }
                     }
                     else 
                     {

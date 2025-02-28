@@ -9,9 +9,21 @@ class ArquivoJogo
             for(int j = 0; j < 8; j++)
             {
                 Peça entrada = grid[i, j];
-                File.AppendAllText(caminho, entrada + Environment.NewLine);
+                
+            
+                if (i == 0 && j ==0) 
+                {
+                    File.AppendAllText(caminho, entrada.ToString()); // Não coloca vírgula no primeiro item
+
+                }
+                else
+                {
+                    File.AppendAllText(caminho, "," + entrada.ToString());
+                }
             }
         }
+
+        File.AppendAllText(caminho, Environment.NewLine);
         
         
     }
