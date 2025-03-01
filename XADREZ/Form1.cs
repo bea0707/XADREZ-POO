@@ -4,6 +4,7 @@ public partial class Form1 : Form
 {
     private int origemX = -1, origemY = -1;
     private bool vezBranco = true;
+    public int numeroJogadas = 0;
 
     public Form1()
     {
@@ -23,14 +24,12 @@ public partial class Form1 : Form
                         origemX = peca.x;
                         origemY = peca.y;
                         MessageBox.Show($"Peça selecionada em ({peca.x}, {peca.y})");
-                        vezBranco = false;
                     }
                     else if(!vezBranco && peca.cor == enumCor.preto)
                     {
                         origemX = peca.x;
                         origemY = peca.y;
                         MessageBox.Show($"Peça selecionada em ({peca.x}, {peca.y})");
-                        vezBranco = true;
                     }
                     else
                     {
@@ -114,10 +113,23 @@ public partial class Form1 : Form
                     {
                           MessageBox.Show("clicou no mesmo lugar");
                     }
+
+                    switch(vezBranco)
+                    {
+                        case true: 
+                            vezBranco = false;
+                        break;
+                        
+                        case false:
+                            vezBranco = true;
+                        break;
+                    }
                 
                     ArquivoJogo.SalvarJogadas(grid);
                     origemX = -1;
                     origemY = -1;
+                    numeroJogadas = numeroJogadas + 1;
+                    ArquivoJogo.CarregarJogadas(numeroJogadas);
             
             }
     }

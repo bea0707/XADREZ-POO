@@ -1,6 +1,5 @@
 class ArquivoJogo
 {
-    
     public static void SalvarJogadas(Peça[,] grid)
     {
         string caminho = "jogadas.txt";
@@ -25,6 +24,19 @@ class ArquivoJogo
 
         File.AppendAllText(caminho, Environment.NewLine);
         
+        
+    }
+
+    public static void CarregarJogadas(int numeroJogadas)
+    {
+        string caminho = "jogadas.txt";
+        string[] jogadasCarregar = new string[63];
+
+        var lerJogadas = File.ReadAllLines(caminho);
+        
+        string jogadas = lerJogadas[lerJogadas.Length - 1];
+
+        jogadasCarregar = jogadas.Split(new[] { ", " }, StringSplitOptions.None);            
         
     }
 }

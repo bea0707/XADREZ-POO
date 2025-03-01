@@ -39,6 +39,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font; //cria a tela
             this.ClientSize = new System.Drawing.Size(400, 400);
             this.Text = "xadrez";
+            File.Delete("jogadas.txt");
 
                 
 
